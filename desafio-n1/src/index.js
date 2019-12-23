@@ -6,5 +6,5 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 ReactDOM.render(<Header />, document.getElementById('header'));
-ReactDOM.render(<App />, document.getElementById('main'));
+ReactDOM.render(<App page="product" id="1" />, document.getElementById('main'));
 ReactDOM.render(<Footer />, document.getElementById('footer'));

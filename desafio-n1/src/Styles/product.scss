@@ -1,0 +1,21 @@
+@import './variables';
+
+.Product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 62.5%;
+    margin: 0 auto;
+
+    .container {
+        display: flex;
+
+        .Info {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .small-image{}
+    .normal-image{}
+}
