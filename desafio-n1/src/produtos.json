@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Super Mario",
+        "productName": "Action Figure Mario - Coleção topzeira das galáxias",
+        "price": "R$ 189,90",
+        "promo": "R$ 149,90",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
+    },
+    {
+        "name": "Yoshi",
+        "productName": "Action Figure Yoshi - Coleção topzeira das galáxias",
+        "price": "R$ 159,90",
+        "promo": "R$ 100,00",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
+    },
+    {
+        "name": "Luigi",
+        "productName": "Action Figure Luigi - Coleção topzeira das galáxias",
+        "price": "R$ 189,90",
+        "promo": "R$ 149,90",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
+    },
+    {
+        "name": "Princess Peach",
+        "productName": "Action Figure Princess Peach - Coleção topzeira das galáxias",
+        "price": "R$ 209,90",
+        "promo": "R$ 189,90",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
+    },
+    {
+        "name": "Bowser",
+        "productName": "Action Figure Bowser - Coleção topzeira das galáxias",
+        "price": "R$ 179,90",
+        "promo": "R$ 159,90",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
+    }
+]

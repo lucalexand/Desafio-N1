@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './Styles/logo.svg';
-import cart from './Styles/cart.svg';
-import './Styles/Header.scss';
+import logo from '../Styles/images/logo.svg';
+import cart from '../Styles/images/cart.svg';
+import '../Styles/Header.scss';
 
 function Header() {
     return(
