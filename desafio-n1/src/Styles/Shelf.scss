@@ -1,0 +1,10 @@
+@import './variables';
+
+.Shelf {
+    display: flex;
+    flex-direction: column;
+
+    &-image {
+        border: 1px solid $border-gray;
+    }
+}
