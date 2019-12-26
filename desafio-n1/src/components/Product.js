@@ -14,7 +14,7 @@ import equal from '../Styles/images/equal.svg';
 function Product ({id}) {
   let product = Products.find(product => product.id === id);
   let butTogheter = Products[parseInt(id)];
-  let otherProducts = Products.filter(product => product.id != id);
+  let otherProducts = Products.filter(product => product.id !== id);
 
   return (
     <div className="Product">

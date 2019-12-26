@@ -2,57 +2,78 @@ import React, { Component } from 'react';
 import '../Styles/App.scss';
 import Products from '../products.json';
 import Product from './Product';
+import Shelf from './Shelf';
+import { TabProvider, Tab, TabPanel, TabList } from 'react-web-tabs';
+import arrow from '../Styles/images/arrow.svg';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {page: this.props.page, id: this.props.id};
+    this.state = {page: this.props.page, 
+                  id: this.props.id};
   }
 
   whatProduct = () => {
     let product = Products.find(product => product.id === this.state.id);
-    return product.name;
+    return product.fullName;
   }
 
-  setPage = (page) => {
-    this.setState({page});
+  changeTab = (tabId) => {
+    let idTab = tabId.replace("#", "");
+    idTab === 3 ? this.setState({page: "product"}) : this.setState({page: "actionfigure"});
+  }
+
+  createShelf = () => {
+    let shelfs = [];
+    let count = 0
+    for (let product of Products) {
+      shelfs.push(
+        <div id={`Product_${++count}`} className="Product">
+          <Shelf name={product.name} product={product} />
+        </div>
+      );
+    }
+    return shelfs;
   }
 
   render() {
     let productName = this.whatProduct();
-    let linkName = productName.toLowerCase().replace(" ", "");
     
     return (
       <div className="App">
-        {/* <ListLink page={this.state.page} productName={productName} linkName={linkName} /> */}
-        <aside className="linkMenu">
-          <li className="link" to="/n1">N1</li>
-          <li className="link" to="/products/actionfigures">Action Figures</li>
-          <li className="link" to="/products/actionfigures/supermario">Super Mario</li>
-          {/* {this.state.page === 'product' &&
-            <CustomLink to={`/products/actionfigures/${linkName}`} product={productName} />
-          } */}
-        </aside>
-        <Product id={this.state.id} />
+        <TabProvider 
+          defaultTab="#3"
+          onChange={(tabId) => { this.changeTab(tabId) }}>
+          <section className="tabs">
+            <TabList className="tabList">
+              <Tab tabFor="#1" className="tab">N1</Tab>
+              <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>
+              <Tab tabFor="#2" className="tab">Action Figures</Tab>
+              {this.state.page === "product" && 
+                <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>}
+              {this.state.page === "product" && 
+                <Tab tabFor="#3" className="tab">{productName}</Tab>}
+            </TabList>
+            <div className="wrapper">
+              <TabPanel tabId="#1">
+                <p>Tab 1 content</p>
+              </TabPanel>
+              <TabPanel tabId="#2">
+                <div className="Shelfs">
+                  {this.createShelf()}
+                </div>
+              </TabPanel>
+              <TabPanel tabId="#3">
+                <Product id={this.state.id} />
+              </TabPanel>
+            </div>
+          </section>
+        </TabProvider>
         
       </div>
     );
   }
 }
-
-// function CustomLink ({to, product}) {
-//   return(
-//       <Link className="link" to={to}>{product}</Link>
-//   )
-// }
-
-// function Product () {
-//   return (
-//     <div className="Product">
-//       <h2>Produto</h2>
-//     </div>
-//   );
-// }
 
 export default App;

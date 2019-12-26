@@ -7,6 +7,30 @@
   width: 62.5%;
   margin: 0 auto;
 
+  .tabList{
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .tab{
+      margin-left: 10px;
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: none;
+      font-weight: $extraBold;
+      color: $tab-gray;
+      outline: none;
+
+      &[aria-selected="true"]{
+        color: $cyan;
+      }
+      
+    }
+
+    .divider {
+      margin-left: 10px;
+    }
+  }
   .linkMenu{
     display: flex;
     align-items: center;
@@ -22,6 +46,34 @@
 
       &:first-of-type{
         margin-left: 0;
+      }
+    }
+  }
+
+  .Shelfs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+
+    .Product{
+      width: 20%;
+      padding: 10px;
+      background-color: #F8F8F8;
+      margin: 0 10px;
+
+      &:nth-of-type(4n+1){
+        margin-left: 0;
+      }
+
+      &:nth-of-type(4n+4){
+        margin-right: 0;
+      }
+      &:nth-of-type(n+5){
+        margin-top: 20px;
+      }
+
+      img {
+        background-color: $white;
       }
     }
   }
