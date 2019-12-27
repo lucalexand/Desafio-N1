@@ -4,8 +4,8 @@
         "name": "mario",
         "fullName": "Super Mario",
         "productName": "Action Figure Mario - Coleção topzeira das galáxias",
-        "price": "R$ 189,90",
-        "promo": "R$ 149,90",
+        "price": "R$ 189.90",
+        "promo": "R$ 149.90",
         "src": "../Styles/images/products/mario.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
     },
@@ -14,8 +14,8 @@
         "name": "yoshi",
         "fullName": "Yoshi",
         "productName": "Action Figure Yoshi - Coleção topzeira das galáxias",
-        "price": "R$ 159,90",
-        "promo": "R$ 100,00",
+        "price": "R$ 159.90",
+        "promo": "R$ 100.00",
         "src": "../Styles/images/products/yoshi.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
     },
@@ -24,8 +24,8 @@
         "name": "luigi",
         "fullName": "Luigi",
         "productName": "Action Figure Luigi - Coleção topzeira das galáxias",
-        "price": "R$ 189,90",
-        "promo": "R$ 149,90",
+        "price": "R$ 189.90",
+        "promo": "R$ 149.90",
         "src": "../Styles/images/products/luigi.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
     },
@@ -34,8 +34,8 @@
         "name": "peach",
         "fullName": "Princesa Peach",
         "productName": "Action Figure Princesa Peach - Coleção topzeira das galáxias",
-        "price": "R$ 209,90",
-        "promo": "R$ 189,90",
+        "price": "R$ 209.90",
+        "promo": "R$ 189.90",
         "src": "../Styles/images/products/peach.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
     },
@@ -44,8 +44,8 @@
         "name": "bowser",
         "fullName": "Bowser",
         "productName": "Action Figure Bowser - Coleção topzeira das galáxias",
-        "price": "R$ 179,90",
-        "promo": "R$ 159,90",
+        "price": "R$ 179.90",
+        "promo": "R$ 159.90",
         "src": "../Styles/images/products/bowser.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum asperiores, minus ratione dolorum facere facilis iure corporis et adipisci tempora temporibus ab mollitia esse odit cum! Corrupti et architecto facilis."
     }

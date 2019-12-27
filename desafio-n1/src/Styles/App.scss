@@ -20,6 +20,7 @@
       font-weight: $extraBold;
       color: $tab-gray;
       outline: none;
+      cursor: pointer;
 
       &[aria-selected="true"]{
         color: $cyan;
@@ -29,24 +30,6 @@
 
     .divider {
       margin-left: 10px;
-    }
-  }
-  .linkMenu{
-    display: flex;
-    align-items: center;
-    height: 60px;
-
-    .link{
-      text-decoration: none;
-      margin-left: 20px;
-      list-style: none;
-      font-size: $f16;
-      font-weight: $extraBold;
-      color: $menu-gray;
-
-      &:first-of-type{
-        margin-left: 0;
-      }
     }
   }
 

@@ -3,8 +3,18 @@
 .Shelf {
     display: flex;
     flex-direction: column;
+    color: $gray;
 
     &-image {
         border: 1px solid $border-gray;
+    }
+
+    span{
+        font-size: $f12;
+        &:nth-of-type(2){
+            color: $cyan;
+            font-weight: $extraBold;
+            font-size: $f18;
+        }
     }
 }

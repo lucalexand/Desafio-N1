@@ -1,0 +1,15 @@
+@import './variables';
+
+.Button {
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $green;
+    font-weight: $extraBold;
+    font-size: $f30;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.16);
+    box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.16);
+}

@@ -18,7 +18,7 @@
             color: $gray;
 
             &-name {
-                height: 100%;
+                height: 50%;
                 padding: 15px;
                 font-size: $f18;
 
@@ -29,24 +29,74 @@
             &-price {
                 height: 100%;
                 background-color: $light-gray;
-                padding: 15px;
+                padding: 15px 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                span span {
+                    color: $cyan;
+                    font-size: $f24;
+                    font-weight: $extraBold;
+                }
+                .Button {
+                    padding: 10px;
+                    font-size: $f20;
+                    width: 35%;
+                    margin-top: 15px;
+                }
             }
             &-frete {
                 height: 60%;
                 margin: 20px 0 0 20px;
-                padding: 15px;
+                padding: 15px 25px;
                 background-color: $cyan;
                 color: $white;
                 border-radius: 5px;
                 font-weight: $extraBold;
                 text-transform: uppercase;
                 font-size: $f12;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .cep {
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        font-family: 'Raleway';
+                        font-size: $f14;
+                        -webkit-box-sizing: border-box; 
+                        -moz-box-sizing: border-box;    
+                        box-sizing: border-box; 
+                        border-radius: 5px;
+                        border: none;
+                    }
+                    input:first-of-type {
+                        width: 50%;
+                        padding: 0 15px;
+                    }
+
+                    input:nth-of-type(2) {
+                        text-align: center;
+                        width: 15%;;
+                    }
+
+                    .Button {
+                        font-size: $f14;
+                        text-transform: capitalize;
+                        padding: 10px 15px;
+                        background-color: $dark-blue;
+                        width: 22%;
+                    }
+                }
             }
         }
 
         .Images{
             display: flex;
-            width: 50%;
+            width: 55%;
             height: 100%;
             justify-content: space-between;
 
@@ -86,6 +136,33 @@
                 width: 35%;
                 background-color: $cyan;
                 border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                color: $white;
+                padding: 30px 25px;
+                font-size: $f20;
+                -webkit-box-sizing: border-box; 
+                -moz-box-sizing: border-box;    
+                box-sizing: border-box; 
+
+                p {
+                    background-color: $yellow;
+                    color: $dark-blue;
+                    font-weight: $bold;
+                    padding: 15px;
+                    border-radius: 5px;
+                    text-align: center;
+                }
+
+                span:nth-of-type(1) {
+                    font-weight: $bold;
+                    font-size: $f16;
+                }
+
+                span:nth-of-type(2) {
+                    font-weight: $extraBold;
+                    font-size: $f28;
+                }
             }
 
             .plus, 
@@ -98,6 +175,9 @@
 
     .SeeToo{
         width: 100%;
+        margin-bottom: 60px;
+        
+        h2 { text-align: center; color: $dark-blue; margin: 0 0 30px; }
 
         // &-item{
         //     background-color: $light-gray;

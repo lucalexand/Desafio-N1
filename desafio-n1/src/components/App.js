@@ -20,8 +20,16 @@ class App extends Component {
   }
 
   changeTab = (tabId) => {
+    console.log(tabId);
     let idTab = tabId.replace("#", "");
-    idTab === 3 ? this.setState({page: "product"}) : this.setState({page: "actionfigure"});
+    if(idTab == 3)
+     this.setState({page: "product"})
+    else
+     this.setState({page: "actionfigure"});
+  }
+
+  selectProduct = (product) => {
+    this.setState({page: "product", id: product.id});
   }
 
   createShelf = () => {
@@ -29,7 +37,7 @@ class App extends Component {
     let count = 0
     for (let product of Products) {
       shelfs.push(
-        <div id={`Product_${++count}`} className="Product">
+        <div id={`Product_${++count}`} className="Product" onClick={e => this.selectProduct(product)}>
           <Shelf name={product.name} product={product} />
         </div>
       );
@@ -44,7 +52,7 @@ class App extends Component {
       <div className="App">
         <TabProvider 
           defaultTab="#3"
-          onChange={(tabId) => { this.changeTab(tabId) }}>
+          onChange={tabId => this.changeTab(tabId)}>
           <section className="tabs">
             <TabList className="tabList">
               <Tab tabFor="#1" className="tab">N1</Tab>
