@@ -16,6 +16,7 @@ class SeeToo extends Component{
         };
         return(
             <div className="SeeToo">
+                <h2>Quem viu, viu também</h2>
                 <Slider {...settings}>
                     <div className="SeeToo-item">
                         <Shelf name={this.state.carousel[0].name} product={this.state.carousel[0]} />
