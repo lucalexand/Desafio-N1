@@ -4,18 +4,22 @@ import Products from '../products.json';
 import Header from './Header';
 import Footer from './Footer';
 import Product from './Product';
+import Modal from './Modal';
 import Shelf from './Shelf';
 import { TabProvider, Tab, TabPanel, TabList } from 'react-web-tabs';
 import arrow from '../Styles/images/arrow.svg';
+import success from '../Styles/images/success.svg';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      page: this.props.page, 
+      page: this.props.page,
       id: this.props.id,
-      cartCounter: 0
+      cartCounter: 0,
+      show: false,
+      show2: false
     };
   }
 
@@ -27,15 +31,15 @@ class App extends Component {
   changeTab = (tabId) => {
     console.log(tabId);
     let idTab = tabId.replace("#", "");
-    if(idTab == 3)
-     this.setState({page: "product"})
+    if (idTab == 3)
+      this.setState({ page: "product" })
     else
-     this.setState({page: "actionfigure"});
+      this.setState({ page: "actionfigure" });
   }
 
   selectProduct = (product) => {
     console.log(product.id);
-    this.setState({page: "product", id: product.id});
+    this.setState({ page: "product", id: product.id });
   }
 
   createShelf = () => {
@@ -54,17 +58,28 @@ class App extends Component {
   updateCart = () => {
     let cartCounter = this.state.cartCounter;
     cartCounter++;
-    this.setState({cartCounter});
+    this.setState({ cartCounter });
   }
+
+  showModal = (e) => {
+    this.setState({
+      show: !this.state.show
+    });
+  };
+  showModal2 = (e) => {
+    this.setState({
+      show2: !this.state.show2
+    });
+  };
 
   render() {
     let productName = this.whatProduct();
-    
+
     return (
       <div className="App">
         <Header cartCounter={this.state.cartCounter} />
         <div className="main">
-          <TabProvider 
+          <TabProvider
             defaultTab="#3"
             onChange={tabId => this.changeTab(tabId)}>
             <section className="tabs">
@@ -72,9 +87,9 @@ class App extends Component {
                 <Tab tabFor="#1" className="tab">N1</Tab>
                 <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>
                 <Tab tabFor="#2" className="tab">Action Figures</Tab>
-                {this.state.page === "product" && 
+                {this.state.page === "product" &&
                   <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>}
-                {this.state.page === "product" && 
+                {this.state.page === "product" &&
                   <Tab tabFor="#3" className="tab">{productName}</Tab>}
               </TabList>
               <div className="wrapper">
@@ -87,11 +102,22 @@ class App extends Component {
                   </div>
                 </TabPanel>
                 <TabPanel tabId="#3">
-                  <Product id={this.state.id} updateCart={this.updateCart} />
+                  <Product id={this.state.id} updateCart={this.updateCart} 
+                    showModal={this.showModal} showModal2={this.showModal2} />
                 </TabPanel>
               </div>
             </section>
           </TabProvider>
+
+          <Modal onClose={this.showModal} show={this.state.show}>
+            <img src={success} className="success" alt="success" />
+            <span>Produto Adicionado</span>
+            <span>ao carrinho</span>
+          </Modal>
+
+          <Modal onClose={this.showModal2} show={this.state.show2}>
+            <span>A funcionalidade de frete está em desenvolvimento.</span>
+          </Modal>
         </div>
         <Footer />
       </div>
