@@ -174,42 +174,42 @@
     }
 
     .SeeToo{
-        width: 100%;
+        width: 110%;
         margin-bottom: 60px;
+        margin-left: -48px;
         
         h2 { text-align: center; color: $dark-blue; margin: 0 0 30px; }
 
-        // &-item{
-        //     background-color: $light-gray;
-        // }
-
-        // &::before{
-        //     content: "";
-        //     display: block;
-        //     background: yellow;
-        //     width: 20px;
-        //     height: 20px;
-        //     float: left;
-        //     margin: 0 6px 0 0;
-        // }
-
-        // &::after{
-
-        // }
-
-        .carousel-prev{ 
-            left: -22px;
+        &-item{
+            background-color: $light-gray;
+            width: 90% !important;
+            padding: 15px 0;
+            display: flex !important;
+            justify-content: center;
         }
-        .carousel-next{ 
-            right: -22px;
+
+        .carousel-dots li button:before {
+            color: $cyan;
+            opacity: 1;
         }
+        .carousel-dots li.carousel-dots-active button:before {
+            color: $dark-blue;
+        }
+
+        .carousel-initialized {
+            padding: 0px 30px !important;
+        }
+
         button {
             background-color: $white;
+            border-radius: 0;
+            width: 30px;
         }
 
         .Shelf {
-            width: 80%;
-            margin: 0 auto;
+            width: 85%;
+            min-height: 305px;
+            justify-content: space-between;
         }
     }
 }
