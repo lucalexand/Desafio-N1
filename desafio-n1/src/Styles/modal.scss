@@ -3,7 +3,7 @@
 .modal {
   width: 300px;
   position: fixed;
-  top: 30%;
+  top: 20%;
   left: 37%;
   z-index: 50;
   background: white;
@@ -45,6 +45,11 @@
     .success {
       width: 60px;
       margin-bottom: 20px;
+    }
+
+    .underConstruction {
+      width: 50%;
+      transform: scale(0.66);
     }
   }
 

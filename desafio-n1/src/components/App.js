@@ -9,6 +9,7 @@ import Shelf from './Shelf';
 import { TabProvider, Tab, TabPanel, TabList } from 'react-web-tabs';
 import arrow from '../Styles/images/arrow.svg';
 import success from '../Styles/images/success.svg';
+import underConstruction from '../Styles/images/under construction.png';
 
 class App extends Component {
   constructor(props) {
@@ -94,7 +95,10 @@ class App extends Component {
               </TabList>
               <div className="wrapper">
                 <TabPanel tabId="#1">
-                  <p>Tab 1 content</p>
+                  <div className="N1">
+                    <img src={underConstruction} className="underConstruction" alt="Under Construction" />
+                    <span>Essa página está em desenvolvimento.</span>
+                  </div>
                 </TabPanel>
                 <TabPanel tabId="#2">
                   <div className="Shelfs">
@@ -116,7 +120,8 @@ class App extends Component {
           </Modal>
 
           <Modal onClose={this.showModal2} show={this.state.show2}>
-            <span>A funcionalidade de frete está em desenvolvimento.</span>
+            <img src={underConstruction} className="underConstruction" alt="Under Construction" />
+            <span>A funcionalidade está em desenvolvimento.</span>
           </Modal>
         </div>
         <Footer />

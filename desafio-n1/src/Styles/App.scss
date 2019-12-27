@@ -34,6 +34,21 @@
       }
     }
 
+    .N1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 60px;
+      color: $cyan;
+      font-size: $f24;
+      font-weight: $extraBold;
+
+      .underConstruction {
+        width: 20%;
+        transform: scale(0.66);
+      }
+    }
+
     .Shelfs {
       display: flex;
       flex-wrap: wrap;
