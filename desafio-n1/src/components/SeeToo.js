@@ -19,28 +19,28 @@ class SeeToo extends Component{
                 <h2>Quem viu, viu também</h2>
                 <Slider {...settings}>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[0].name} product={this.state.carousel[0]} />
+                        <Shelf name={this.props.carousel[0].name} product={this.props.carousel[0]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[1].name} product={this.state.carousel[1]} />
+                        <Shelf name={this.props.carousel[1].name} product={this.props.carousel[1]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[2].name} product={this.state.carousel[2]} />
+                        <Shelf name={this.props.carousel[2].name} product={this.props.carousel[2]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[3].name} product={this.state.carousel[3]} />
+                        <Shelf name={this.props.carousel[3].name} product={this.props.carousel[3]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[0].name} product={this.state.carousel[0]} />
+                        <Shelf name={this.props.carousel[0].name} product={this.props.carousel[0]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[1].name} product={this.state.carousel[1]} />
+                        <Shelf name={this.props.carousel[1].name} product={this.props.carousel[1]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[2].name} product={this.state.carousel[2]} />
+                        <Shelf name={this.props.carousel[2].name} product={this.props.carousel[2]} />
                     </div>
                     <div className="SeeToo-item">
-                        <Shelf name={this.state.carousel[3].name} product={this.state.carousel[3]} />
+                        <Shelf name={this.props.carousel[3].name} product={this.props.carousel[3]} />
                     </div>
                 </Slider>
             </div>

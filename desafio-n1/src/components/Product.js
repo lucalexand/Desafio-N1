@@ -12,7 +12,7 @@ import bowser from '../Styles/images/products/bowser.png';
 import plus from '../Styles/images/plus.svg';
 import equal from '../Styles/images/equal.svg';
 
-function Product({ id }) {
+function Product({ id, updateCart }) {
   let product = Products.find(product => product.id === id);
   let butTogheter = Products[parseInt(id)] ? Products[parseInt(id)] : Products[0];
   let otherProducts = Products.filter(product => product.id !== id);
@@ -27,7 +27,7 @@ function Product({ id }) {
     <div className="Product">
       <div className="Product-info">
         <Images name={product.name} />
-        <Info product={product} />
+        <Info product={product} updateCart={updateCart} />
       </div>
 
       <div className="desc">
@@ -51,7 +51,7 @@ function Product({ id }) {
         </div>
       </div>
 
-      <SeeToo products={otherProducts} />
+      <SeeToo carousel={otherProducts} />
     </div>
   );
 }
@@ -85,7 +85,7 @@ function Images({ name }) {
   );
 }
 
-function Info({ product }) {
+function Info({ product, updateCart }) {
   let { productName, price, promo } = product;
   return (
     <div className="Info">
@@ -93,7 +93,7 @@ function Info({ product }) {
       <div className="Info-price">
         <span> de {price} </span>
         <span> por <span>{promo}</span> </span>
-        <Button />
+        <Button updateCart={updateCart} />
       </div>
       <div className="Info-frete">
         <span>Calcule o Frete</span>
@@ -104,7 +104,7 @@ function Info({ product }) {
           <input type="text" maxlength="3" size="3" placeholder="000"
             onFocus={e => e.target.placeholder = ''} onBlur={e => e.target.placeholder = '000'}
             onChange={e => setInputFilter(e.target, value => /^\d*\.?\d*$/.test(value))} />
-          <Button value="Calcular"/>
+          <Button value="Calcular" />
         </div>
       </div>
     </div>

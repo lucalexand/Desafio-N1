@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../Styles/App.scss';
 import Products from '../products.json';
+import Header from './Header';
+import Footer from './Footer';
 import Product from './Product';
 import Shelf from './Shelf';
 import { TabProvider, Tab, TabPanel, TabList } from 'react-web-tabs';
@@ -10,8 +12,11 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {page: this.props.page, 
-                  id: this.props.id};
+    this.state = {
+      page: this.props.page, 
+      id: this.props.id,
+      cartCounter: 0
+    };
   }
 
   whatProduct = () => {
@@ -29,6 +34,7 @@ class App extends Component {
   }
 
   selectProduct = (product) => {
+    console.log(product.id);
     this.setState({page: "product", id: product.id});
   }
 
@@ -45,40 +51,49 @@ class App extends Component {
     return shelfs;
   }
 
+  updateCart = () => {
+    let cartCounter = this.state.cartCounter;
+    cartCounter++;
+    this.setState({cartCounter});
+  }
+
   render() {
     let productName = this.whatProduct();
     
     return (
       <div className="App">
-        <TabProvider 
-          defaultTab="#3"
-          onChange={tabId => this.changeTab(tabId)}>
-          <section className="tabs">
-            <TabList className="tabList">
-              <Tab tabFor="#1" className="tab">N1</Tab>
-              <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>
-              <Tab tabFor="#2" className="tab">Action Figures</Tab>
-              {this.state.page === "product" && 
-                <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>}
-              {this.state.page === "product" && 
-                <Tab tabFor="#3" className="tab">{productName}</Tab>}
-            </TabList>
-            <div className="wrapper">
-              <TabPanel tabId="#1">
-                <p>Tab 1 content</p>
-              </TabPanel>
-              <TabPanel tabId="#2">
-                <div className="Shelfs">
-                  {this.createShelf()}
-                </div>
-              </TabPanel>
-              <TabPanel tabId="#3">
-                <Product id={this.state.id} />
-              </TabPanel>
-            </div>
-          </section>
-        </TabProvider>
-        
+        <Header cartCounter={this.state.cartCounter} />
+        <div className="main">
+          <TabProvider 
+            defaultTab="#3"
+            onChange={tabId => this.changeTab(tabId)}>
+            <section className="tabs">
+              <TabList className="tabList">
+                <Tab tabFor="#1" className="tab">N1</Tab>
+                <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>
+                <Tab tabFor="#2" className="tab">Action Figures</Tab>
+                {this.state.page === "product" && 
+                  <span className="divider"><img src={arrow} className="arrow" alt="arrow" /></span>}
+                {this.state.page === "product" && 
+                  <Tab tabFor="#3" className="tab">{productName}</Tab>}
+              </TabList>
+              <div className="wrapper">
+                <TabPanel tabId="#1">
+                  <p>Tab 1 content</p>
+                </TabPanel>
+                <TabPanel tabId="#2">
+                  <div className="Shelfs">
+                    {this.createShelf()}
+                  </div>
+                </TabPanel>
+                <TabPanel tabId="#3">
+                  <Product id={this.state.id} updateCart={this.updateCart} />
+                </TabPanel>
+              </div>
+            </section>
+          </TabProvider>
+        </div>
+        <Footer />
       </div>
     );
   }

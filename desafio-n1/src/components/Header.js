@@ -17,7 +17,7 @@ class Header extends Component {
                     <img src={logo} className="Header-logo" alt="logo" />
                     <Menu />
                     <Search />
-                    <Cart cartCounter={this.state.cartCounter} />
+                    <Cart cartCounter={this.props.cartCounter} />
                 </div>
             </div>
         );
